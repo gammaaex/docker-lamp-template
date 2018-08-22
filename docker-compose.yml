@@ -6,7 +6,7 @@ services:
     ports:
       - $MYSQL_LISTEN_PORT:3306
     volumes:
-      - ./mariadb/db:$DATA_DIR
+      - ./mariadb/db:$MYSQL_DATA_DIR
       - ./mariadb/init:/docker-entrypoint-initdb.d
       - ./mariadb/conf.d:/etc/mysql/conf.d
 
